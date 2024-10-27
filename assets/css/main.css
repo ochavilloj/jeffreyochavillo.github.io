@@ -2133,8 +2133,8 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.avatar {
-			border-radius: 100%;
+		/* .image.avatar {
+			/* border-radius: 100%;
 		}
 
 			.image.avatar:before {
@@ -2143,8 +2143,40 @@ input, select, textarea {
 
 			.image.avatar img {
 				border-radius: 100%;
-				width: 100%;
-			}
+				width: 100%; */
+
+			/* } */
+		.image.avatar img {
+			border-radius: 50%;
+			width: 100%;
+			max-width: 150px; /* Adjust this value as needed for size */
+			height: 150;
+			display: block;
+		}
+		
+		.image.avatar {
+			position: relative;
+			display: inline-block;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		
+		.image.avatar:before {
+			-moz-transition: opacity 0.2s ease-in-out;
+			-webkit-transition: opacity 0.2s ease-in-out;
+			-ms-transition: opacity 0.2s ease-in-out;
+			transition: opacity 0.2s ease-in-out;
+			background: url("images/overlay.png");
+			border-radius: 50%;
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			opacity: 0.5;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}	
 
 /* List */
 
